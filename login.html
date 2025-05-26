@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация | WebCreator</title>
+    <link rel="stylesheet" href="styles/reg.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+    <script src="/validation.js" defer></script>
+    <script src="scripts/auth.js"></script>
+  </header>
+  <body>
+    <div class="auth-container">
+      <div class="logo">
+        <img src="ico/android-chrome-512x512.png" alt="Логотип" />
+        <h1>WebCreator</h1>
+      </div>
+      <h2 id="auth-title">Вход</h2>
+      <form id="auth-form">
+        <input
+          type="email"
+          id="username"
+          name="email"
+          placeholder="Почта"
+          required
+        />
+        <div class="text-danger" id="username-validation"></div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Пароль"
+          required
+        />
+        <div class="text-danger" id="password-validation"></div>
+        <button type="submit" id="auth-button">Войти и начать создание</button>
+        <div class="text-danger" id="validation-summary"></div>
+      </form>
+      <p id="toggle-auth">Зарегистрироваться</p>
+    </div>
+  </body>
+</html>

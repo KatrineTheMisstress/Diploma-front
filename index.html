@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebCreator</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+  </head>
+  <body>
+    <!-- Хедер -->
+    <header class="header">
+      <h1 class="logo">WebCreator</h1>
+      <button class="menu-btn">☰</button>
+    </header>
+
+    <!-- Меню (скрыто по умолчанию) -->
+    <nav class="menu">
+      <ul>
+        <li><a href="login.html">Вход и регистрация</a></li>
+        <li><a href="index.html">Главная страница</a></li>
+        <li><a href="#">Блок 3</a></li>
+        <li>
+          <button class="close-menu">&#10005;</button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Карусель -->
+    <div class="carousel">
+      <div class="carousel-slides">
+        <div class="slide gradient-slide-1">
+          <h2>Создавайте уникальные веб-страницы без кода</h2>
+          <h3>
+            Интуитивно понятный конструктор для создания динамических
+            HTML-страниц
+          </h3>
+          <p>
+            Перетаскивайте блоки, настраивайте стили, добавляйте интерактивные
+            элементы — и всё это без сложностей
+          </p>
+        </div>
+        <div class="slide gradient-slide-2">
+          <h2>Гибкая кастомизация и анимации</h2>
+          <h3>Полный контроль над дизайном и поведением элементов</h3>
+          <p>
+            Настраивайте цвета, шрифты, размеры, анимации и поведение каждого
+            блока так, как вам нужно
+          </p>
+        </div>
+        <div class="slide gradient-slide-3">
+          <h2>Готовы начать?</h2>
+          <h3>Создайте свой первый проект прямо сейчас</h3>
+          <p>
+            Сохранение, редактирование, экспорт в HTML, CSS и JS — всё в одном
+            месте
+          </p>
+          <div class="center">
+            <button href="login.html" class="cta-btn">
+              Попробовать сейчас
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+      <div class="dots"></div>
+    </div>
+    <!-- Навигация -->
+    <section class="how-it-works">
+      <h2>Как это работает?</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Перетаскивание блоков</h3>
+          <p>
+            Легко перетаскивайте элементы на страницу и настраивайте их под ваши
+            нужды.
+          </p>
+        </div>
+        <div class="step">
+          <h3>2. Кастомизация</h3>
+          <p>Настройте стили, анимации и поведение каждого элемента.</p>
+        </div>
+        <div class="step">
+          <h3>3. Генерация кода</h3>
+          <p>
+            Получите HTML, CSS и JavaScript код для вашего проекта с
+            возможностью экспорта.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2>Отзывы наших пользователей</h2>
+      <div class="testimonial">
+        <p>
+          "Этот конструктор страниц действительно упрощает процесс создания
+          сайтов. Я смог создать красивую страницу без опыта в
+          программировании!"
+        </p>
+        <span>- Алексей, дизайнер</span>
+      </div>
+      <div class="testimonial">
+        <p>
+          "Очень удобный интерфейс, много опций для настройки. Рекомендую всем,
+          кто ищет быстрое решение для своих проектов."
+        </p>
+        <span>- Ирина, веб-разработчик</span>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Конструктор страниц. Все права защищены.</p>
+        <ul>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Условия использования</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

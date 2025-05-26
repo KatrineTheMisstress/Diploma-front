@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Создание проекта - WebCreate</title>
+    <link rel="stylesheet" href="styles/constructor.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="renderBlock.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">WebCreate</div>
+      <div class="header-buttons">
+        <button id="preview" href="/preview.html">Превью</button>
+        <button id="saveAndExitBtn" href="/projects.html">
+          Сохранить и выйти
+        </button>
+      </div>
+    </header>
+    <div
+      id="slideModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 35%;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        z-index: 1000;
+      "
+    >
+      <label>Текст слайда: <input type="text" id="slideText" /></label
+      ><br /><br />
+      <label>Картинка: <input type="file" id="slideImage" /></label><br /><br />
+      <button id="saveSlideBtn">Сохранить</button>
+      <button id="cancelSlideBtn">Отмена</button>
+    </div>
+    <!-- Меню выбора блока -->
+
+    <div class="workspace">
+      <div id="blocksContainer" class="blocks-container">
+        <div class="block"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="add-block" id="addBlock"><span>+</span></div>
+    </div>
+
+    <div class="block-menu" id="blockMenu">
+      <h3>Выберите блок для добавления</h3>
+      <ul id="blockList"></ul>
+      <button id="closeMenuBtn">Закрыть</button>
+    </div>
+
+    <script src="blocks.js"></script>
+  </body>
+</html>

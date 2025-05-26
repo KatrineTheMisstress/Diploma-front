@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/preview.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #2e2c5a;
+        color: #000000;
+      }
+      #page-preview {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .block {
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 6px;
+        background: #fefefe;
+      }
+      h2[contenteditable],
+      p[contenteditable],
+      div[contenteditable] {
+        outline: 2px solid #aaf;
+        padding: 2px 4px;
+        border-radius: 3px;
+        min-height: 20px;
+        cursor: text;
+      }
+      button {
+        cursor: pointer;
+        padding: 6px 12px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blocksContainer"></div>
+
+    <script>
+      // Тут будет твой renderBlock(block) и код для загрузки и отображения блоков
+    </script>
+    <script src="preview.js"></script>
+  </body>
+</html>

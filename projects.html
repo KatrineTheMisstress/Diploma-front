@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="styles/projects.css" />
+  </head>
+  <body>
+    <!-- Меню -->
+    <header class="top-menu">
+      <h1>Мои проекты</h1>
+    </header>
+
+    <!-- Список проектов -->
+    <main>
+      <ul id="projectList" class="project-list"></ul>
+      <div class="controls">
+        <div class="add-project" id="addProject"><span>+</span></div>
+      </div>
+    </main>
+
+    <!-- Модальное окно создания проекта -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Создать проект</h2>
+        <input
+          type="text"
+          id="projectNameInput"
+          placeholder="Название проекта"
+          class="input"
+        />
+        <button id="createProjectBtn">Создать</button>
+      </div>
+    </div>
+
+    <script src="projects.js"></script>
+  </body>
+</html>
