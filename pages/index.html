@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebCreator</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -30,17 +30,15 @@
     <link rel="manifest" href="ico/site.webmanifest" />
   </head>
   <body>
-    <!-- Хедер -->
     <header class="header">
       <h1 class="logo">WebCreator</h1>
       <button class="menu-btn">☰</button>
     </header>
 
-    <!-- Меню (скрыто по умолчанию) -->
     <nav class="menu">
       <ul>
-        <li><a href="login.html">Вход и регистрация</a></li>
-        <li><a href="index.html">Главная страница</a></li>
+        <li><a href="/pages/login.html">Вход и регистрация</a></li>
+        <li><a href="/pages/index.html">Главная страница</a></li>
         <li><a href="#">Блок 3</a></li>
         <li>
           <button class="close-menu">&#10005;</button>
@@ -48,7 +46,6 @@
       </ul>
     </nav>
 
-    <!-- Карусель -->
     <div class="carousel">
       <div class="carousel-slides">
         <div class="slide gradient-slide-1">
@@ -78,7 +75,7 @@
             месте
           </p>
           <div class="center">
-            <button href="login.html" class="cta-btn">
+            <button href="/pages/login.html" class="cta-btn">
               Попробовать сейчас
             </button>
           </div>
@@ -88,7 +85,6 @@
       <button class="next">&#10095;</button>
       <div class="dots"></div>
     </div>
-    <!-- Навигация -->
     <section class="how-it-works">
       <h2>Как это работает?</h2>
       <div class="steps">
@@ -141,6 +137,6 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="/scripts/app.js"></script>
   </body>
 </html>

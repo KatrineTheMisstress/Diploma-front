@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Конструктор страницы</title>
+    <link rel="stylesheet" href="/styles/constructor.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1 class="header">Редактор страницы</h1>
+      <div class="top-buttons">
+        <button id="preview">Предпросмотр</button>
+        <button id="save-btn">💾 Сохранить</button>
+        <a href="downloadHref" id="download-page"> Скачать архив проекта </a>
+      </div>
+    </header>
+
+    <main class="constructor-main">
+      <div id="blocks-container" class="blocks-container">
+        <div class="forms-container"></div>
+        <div id="empty-placeholder" class="empty-placeholder">
+          <div id="add-block-placeholder" class="add-block-box">
+            <span class="plus-sign">+</span>
+            <span class="hover-text">Создать блок</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="blockTypeModal" class="modal hidden">
+      <div class="modal-content">
+        <h3 class="modal-title">Выберите тип блока</h3>
+        <div id="block-type-list" class="p-4"></div>
+
+        <button id="closeBlockTypeModal" class="cancel-button">Отмена</button>
+      </div>
+    </div>
+    <div id="contentModal" class="modal hidden">
+      <div class="modal-content">
+        <h3 id="contentModalTitle">Добавить блок</h3>
+        <div id="empty-placeholder" class="hidden">Нет блоков на странице</div>
+
+        <textarea
+          id="block-content"
+          placeholder="Введите содержимое..."
+        ></textarea>
+        <button id="add-block-btn">Добавить</button>
+      </div>
+    </div>
+
+    <div id="deleteModal" class="modal hidden">
+      <div class="modal-content">
+        <p>Вы точно хотите удалить данный блок?</p>
+        <div class="modal-actions">
+          <button id="confirmDeleteBtn">Да</button>
+          <button id="cancelDeleteBtn">Нет</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/scripts/constructor.js"></script>
+  </body>
+</html>

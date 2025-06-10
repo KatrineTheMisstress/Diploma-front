@@ -58,7 +58,7 @@ function submitForm() {
     })
     .then((userInfo) => {
       console.log(userInfo);
-      window.location.href = "/projects.html";
+      window.location.href = "/pages/projects.html";
       console.log("Из LocalStorage:", localStorage.getItem("accessToken"));
     })
     .catch((error) => {

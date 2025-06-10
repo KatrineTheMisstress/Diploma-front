@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="/styles/projects.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+  </head>
+  <body>
+    <header class="top-menu">
+      <h1 class="header">Мои проекты</h1>
+      <a href="/pages/admin.html" class="admin-btn">Панель администратора</a>
+    </header>
+
+    <main>
+      <ul id="projectList" class="project-list"></ul>
+      <div class="controls">
+        <div class="add-project" id="addProject"><span>+</span></div>
+      </div>
+    </main>
+
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Создать проект</h2>
+        <input
+          type="text"
+          id="projectNameInput"
+          placeholder="Название проекта"
+          class="input"
+        />
+        <button id="createProjectBtn">Создать</button>
+      </div>
+    </div>
+
+    <div id="settingsModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span id="closeSettingsModal" class="close">&times;</span>
+        <h2>Настройки проекта</h2>
+
+        <div class="custom-font-select-wrapper">
+          <label for="fontSelect">Шрифт</label>
+          <select id="fontSelect" class="custom-font-select">
+            <option value="Inter" style="font-family: Inter">
+              Inter (по умолчанию)
+            </option>
+            <option value="Arial" style="font-family: Arial">Arial</option>
+            <option value="Verdana" style="font-family: Verdana">
+              Verdana
+            </option>
+            <option value="Georgia" style="font-family: Georgia">
+              Georgia
+            </option>
+            <option
+              value="Times New Roman"
+              style="font-family: 'Times New Roman'"
+            >
+              Times New Roman
+            </option>
+            <option value="Courier New" style="font-family: 'Courier New'">
+              Courier New
+            </option>
+            <option value="Trebuchet MS" style="font-family: 'Trebuchet MS'">
+              Trebuchet MS
+            </option>
+          </select>
+        </div>
+
+        <label for="bgColorInput">Цвет фона</label>
+        <input type="color" id="bgColorInput" value="#ffffff" />
+
+        <div class="padding_modal">
+          <label for="paddingInput">Отступ body (в %, от 1 до 30)</label>
+          <input type="number" id="paddingInput" min="1" max="30" value="10" />
+        </div>
+        <button id="applySettingsBtn">Готово</button>
+      </div>
+    </div>
+
+    <script src="/scripts/projects.js"></script>
+  </body>
+</html>
