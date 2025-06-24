@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectId = document.getElementById("settingsModal").dataset.projectId;
 
   const token = localStorage.getItem("accessToken");
+
   addProjectBtn.addEventListener("click", () => {
     projectModal.style.display = "block";
     projectNameInput.value = "";
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    fetch("http://localhost:3000/api/pages", {
+    fetch("http://92.51.23.240:3000/api/pages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  fetch("http://localhost:3000/api/pages/my", {
+  fetch("http://92.51.23.240:3000/api/pages/my", {
     headers: {
       Authorization: `${token}`,
     },
@@ -116,10 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const font = document.getElementById("fontSelect").value.trim();
     const bgColor = document.getElementById("bgColorInput").value.trim();
 
-    // Сборка базового CSS
     let styles = `body {padding: 0px ${padding}%; font-family: '${font}'`;
 
-    // Добавим background-color ТОЛЬКО если он нужен
     if (bgColor && bgColor !== "#ffffff") {
       styles += `; background-color: ${bgColor}`;
     }
@@ -133,8 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(payload);
 
-    fetch(`http://localhost:3000/api/pages/save/global-settings`, {
-      method: "POST", // или POST, в зависимости от API
+    fetch(`http://92.51.23.240:3000/api/pages/save/global-settings`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `${token}`,
@@ -196,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    fetch("http://localhost:3000/api/pages", {
+    fetch("http://92.51.23.240:3000/api/pages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

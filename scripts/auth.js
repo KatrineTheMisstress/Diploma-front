@@ -26,7 +26,7 @@ function submitForm() {
   });
   console.log(data);
 
-  fetch("http://localhost:3000/api/auth/login", {
+  fetch("http://92.51.23.240:3000/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function submitForm() {
     })
     .then((result) => {
       localStorage.setItem("accessToken", result.acessToken);
-      return fetch("http://localhost:3000/api/auth", {
+      return fetch("http://92.51.23.240:3000/api/auth", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

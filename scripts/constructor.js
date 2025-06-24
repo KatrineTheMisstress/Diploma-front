@@ -6,11 +6,14 @@ const formsContainer = document.querySelector(".forms-container");
 const token = localStorage.getItem("accessToken");
 
 async function fetchBlockTypes() {
-  const response = await fetch("http://localhost:3000/api/pages/all-blocks", {
-    headers: {
-      Authorization: `${token}`,
-    },
-  });
+  const response = await fetch(
+    "http://92.51.23.240:3000/api/pages/all-blocks",
+    {
+      headers: {
+        Authorization: `${token}`,
+      },
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Ошибка при получении блоков");
@@ -38,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const token = localStorage.getItem("accessToken");
 
     const saveBtn = document.getElementById("download-page");
-    saveBtn.href = `http://localhost:3000/api/pages/${pageId}/download`;
+    saveBtn.href = `http://92.51.23.240:3000/api/pages/${pageId}/download`;
 
     const allTypes = await fetchBlockTypes();
     const typesMap = Object.fromEntries(
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
 
     const response = await fetch(
-      `http://localhost:3000/api/pages/one/${pageId}`,
+      `http://92.51.23.240:3000/api/pages/one/${pageId}`,
       {
         method: "GET",
         headers: {
@@ -259,7 +262,7 @@ saveBtn.addEventListener("click", () => {
       data: blockData,
     });
   });
-  fetch("http://localhost:3000/api/pages/save", {
+  fetch("http://92.51.23.240:3000/api/pages/save", {
     method: "POST",
     headers: {
       Authorization: token,
@@ -286,7 +289,7 @@ saveBtn.addEventListener("click", () => {
 const deleteModal = document.getElementById("deleteModal");
 const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
 const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
-const downloadHref = "http://localhost:3000/api/pages/${pageId}/download";
+const downloadHref = "http://92.51.23.240:3000/api/pages/${pageId}/download";
 
 let blockToDelete = null;
 

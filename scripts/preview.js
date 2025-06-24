@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function fetchPageData() {
   const data = JSON.parse(localStorage.getItem("preview-data"));
   console.log(data);
-  const response = await fetch("http://localhost:3000/api/pages/preview", {
+  const response = await fetch("http://92.51.23.240:3000/api/pages/preview", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

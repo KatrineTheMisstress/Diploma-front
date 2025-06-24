@@ -34,7 +34,7 @@ function renderTable(data) {
 
 async function getCurUser() {
   try {
-    const res = await fetch("http://localhost:3000/api/auth/curUser", {
+    const res = await fetch("http://92.51.23.240:3000/api/auth/curUser", {
       method: "GET",
       headers: {
         Authorization: token,
@@ -92,14 +92,17 @@ document.getElementById("save-btn").addEventListener("click", async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/api/pages/blocks/update", {
-      method: "POST",
-      headers: {
-        Authorization: `${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const res = await fetch(
+      "http://92.51.23.240:3000/api/pages/blocks/update",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     if (res.ok) {
       alert("Данные успешно сохранены.");
@@ -146,14 +149,17 @@ document.getElementById("submit-new").addEventListener("click", async () => {
   });
 
   try {
-    const res = await fetch("http://localhost:3000/api/pages/blocks/create", {
-      method: "POST",
-      headers: {
-        Authorization: `${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newBlocks),
-    });
+    const res = await fetch(
+      "http://92.51.23.240:3000/api/pages/blocks/create",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newBlocks),
+      }
+    );
 
     if (!res.ok) throw new Error();
 
@@ -168,7 +174,7 @@ document.getElementById("submit-new").addEventListener("click", async () => {
 
 async function loadTableData() {
   try {
-    const res = await fetch("http://localhost:3000/api/pages/blocks", {
+    const res = await fetch("http://92.51.23.240:3000/api/pages/blocks", {
       headers: {
         Authorization: `${token}`,
       },
